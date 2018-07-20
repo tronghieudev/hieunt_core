@@ -29,7 +29,7 @@ RUN curl -O https://dl-ssl.google.com/dl/linux/direct/mod-pagespeed-stable_curre
 
 # we want some config changes
 #COPY config/50-php_settings.ini /etc/opt/remi/php72/php.d/
-COPY conf.d/vzlove.local.conf /etc/httpd/conf.d/
+COPY conf.d/ /etc/httpd/conf.d/
 
 # create webserver-default directory
 #RUN mkdir -p /var/www/page/public

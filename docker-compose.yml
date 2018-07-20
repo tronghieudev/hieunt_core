@@ -3,17 +3,17 @@ version: '3'
 services:
   db:
     image: mysql:5.7
-    container_name: vzlove_db
+    container_name: mysql
     volumes:
       - ./data/mysql:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_ROOT_PASSWORD=password
     ports:
       - 3306:3306
 
-  vzlove:
+  core:
     build: .
-    container_name: vzlove
+    container_name: hieunt_core
     depends_on:
       - db
     ports:
